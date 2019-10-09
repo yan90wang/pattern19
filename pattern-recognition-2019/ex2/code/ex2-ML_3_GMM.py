@@ -70,10 +70,54 @@ def gmm_em(data, K: int, iter: int, plot=False) -> list:
     gmm = []
     # TODO: EXERCISE 2 - Implement E and M step of GMM algorithm
     # Hint - first randomly assign a cluster to each sample
+    mixing_coeff = 1 / K
+    # clusters is an array where each entry maps a the cluster number for each data sample
+    clusters = np.zeros((N,))
+    for sample in range(N):
+        clusters[sample] = np.random.random_integers(1, K)
+    # create an array with data for each randomly assigned cluster
+    for cluster_no in range(1, K + 1):
+        assigned_indeces = np.where(clusters == cluster_no)[0]
+        cluster_size = len(assigned_indeces)
+        data_for_cluster = np.zeros((d, cluster_size))
+        for ind in range(cluster_size):
+            data_for_cluster[:, ind] = data[:, assigned_indeces[ind]]
+        gmm.append(MVND(data_for_cluster, mixing_coeff))
     # Hint - then iteratively update mean, cov and p value of each cluster via EM
     # Hint - use the gmm_draw() function to visualize each step
-
-    plt.show()
+    for it in range(iter):
+        gmm_draw(gmm, data, 'iteration ' + str(it))
+        new_clusters = []
+        # cluster_responsibilities for calculating c_new
+        cluster_responsibilities = []
+        # initialize empty data for new clusters
+        for component in range(K):
+            new_clusters.insert(component, [])
+            cluster_responsibilities.insert(component, [])
+        for sample in range(N):
+            # calculate responsibility
+            p = 0
+            responsibility = []
+            for component in range(K):
+                cluster_mvnd = gmm[component]
+                p += cluster_mvnd.c * cluster_mvnd.pdf(data[:, sample])
+            # find max responsibility
+            for component in range(K):
+                cluster_mvnd = gmm[component]
+                p_component = (cluster_mvnd.c * cluster_mvnd.pdf(data[:, sample])) / p
+                responsibility.append(p_component)
+            max_cluster = np.argmax(responsibility, 0)
+            # assign sample to maximum responsibility
+            new_clusters[max_cluster].append(data[:, sample])
+            cluster_responsibilities[max_cluster].append(np.amax(responsibility))
+            # check for convergence
+        # make new gmm
+        gmm.clear()
+        for component in range(K):
+            c_new = np.sum(cluster_responsibilities[component]) / N
+            gmm.append(MVND(np.transpose(np.asarray(new_clusters[component])), c_new))
+        plt.draw()
+        plt.pause(0.001)
     return gmm
 
 
@@ -91,8 +135,8 @@ def gmmSkinDetection() -> None:
     Classify the test and training image using the classify helper function.
     Note that the "mask" binary images are used as the ground truth.
     '''
-    K = 3
-    iter = 50
+    K = 2
+    iter = 10
     sdata = scipy.io.loadmat(os.path.join(dataPath, 'skin.mat'))['sdata']
     ndata = scipy.io.loadmat(os.path.join(dataPath, 'nonskin.mat'))['ndata']
     gmms = gmm_em(sdata, K, iter)
@@ -121,7 +165,7 @@ if __name__ == "__main__":
     print("Python version in use: ", sys.version)
     print("\nMVND exercise - Toy example")
     print("##########-##########-##########")
-    gmmToyExample()
+    # gmmToyExample()
     print("\nMVND exercise - Skin detection")
     print("##########-##########-##########")
     gmmSkinDetection()
