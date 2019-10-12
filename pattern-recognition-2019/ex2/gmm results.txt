@@ -1,0 +1,39 @@
+1 component: 
+
+Total Error WITHOUT Prior = 10798
+false positive rate = 6899
+false negative rate = 3899
+----- ----- -----
+Total Error WITH Prior = 10387
+false positive rate = 6434
+false negative rate = 3953
+
+
+2 components: 
+
+----- ----- -----
+TEST DATA
+----- ----- -----
+Total Error WITHOUT Prior = 13177
+false positive rate = 9647
+false negative rate = 3530
+----- ----- -----
+Total Error WITH Prior = 12136
+false positive rate = 8384
+false negative rate = 3752
+----- ----- -----
+##########-##########-##########
+
+
+3 components: 
+
+TEST DATA
+----- ----- -----
+Total Error WITHOUT Prior = 35312
+false positive rate = 818
+false negative rate = 34494
+----- ----- -----
+Total Error WITH Prior = 35835
+false positive rate = 790
+false negative rate = 35045
+----- ----- -----

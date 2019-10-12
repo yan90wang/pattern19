@@ -59,7 +59,11 @@ def classify(img: imageHelper, mask: imageHelper, skin_mvnd: List[MVND], notSkin
     # TODO: EXERCISE 2 - Error Rate without prior
     fp = np.count_nonzero(imgMinMask == 1)
     fn = np.count_nonzero(imgMinMask == -1)
-    totalError = np.count_nonzero(imgMinMask)
+    totalError = fp + fn
+    totalNegatives = np.count_nonzero(testmask)
+    totalPositives = npixels - totalNegatives
+    fp = fp / (fp + totalNegatives)
+    fn = fn / (fn + totalPositives)
 
     print('----- ----- -----')
     print('Total Error WITHOUT Prior =', totalError)
@@ -72,7 +76,11 @@ def classify(img: imageHelper, mask: imageHelper, skin_mvnd: List[MVND], notSkin
     imgMinMask_prior = skin_prior - testmask
     fp_prior = np.count_nonzero(imgMinMask_prior == 1)
     fn_prior = np.count_nonzero(imgMinMask_prior == -1)
-    totalError_prior = np.count_nonzero(imgMinMask_prior)
+    totalError_prior = fp_prior + fn_prior
+    totalNegatives_prior = np.count_nonzero(testmask)
+    totalPositives_prior = npixels - totalNegatives_prior
+    fp_prior = fp_prior/ (fp_prior + totalNegatives_prior)
+    fn_prior = fn_prior / (fn_prior + totalPositives_prior)
     print('----- ----- -----')
     print('Total Error WITH Prior =', totalError_prior)
     print('false positive rate =', fp_prior)

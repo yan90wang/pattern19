@@ -135,7 +135,7 @@ def gmmSkinDetection() -> None:
     Classify the test and training image using the classify helper function.
     Note that the "mask" binary images are used as the ground truth.
     '''
-    K = 2
+    K = 3
     iter = 10
     sdata = scipy.io.loadmat(os.path.join(dataPath, 'skin.mat'))['sdata']
     ndata = scipy.io.loadmat(os.path.join(dataPath, 'nonskin.mat'))['ndata']
