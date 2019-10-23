@@ -83,7 +83,7 @@ def cholesky_factor_2d(mat: np.ndarray) -> np.ndarray:
     assert d == n and n == 2
     assert mat[0, 1] - mat[1, 0] < 1e-5
 
-    L = None
+    L = np.linalg.cholesky(mat)
     return L
 
 
@@ -96,7 +96,7 @@ def sample_from_2d_gaussian(mean: np.ndarray, cov: np.ndarray) -> np.ndarray:
     # Step2: Transform the uniform samples into samples from a standard normal distribution
     # using the box_muller_transform
     (rnd1, rnd2) = box_muller_transform(random_number_uniform_1, random_number_uniform_2)
-    L = np.linalg.cholesky(cov)
+    L = cholesky_factor_2d(cov)
     sample = np.dot(L, [rnd1, rnd2]) + mean
     # Convert the normal samples into a 2D sample from a MVND with the provided mean and covariance matrix
     return sample

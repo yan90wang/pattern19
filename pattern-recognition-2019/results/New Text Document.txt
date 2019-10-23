@@ -1,0 +1,73 @@
+K=3 
+
+
+TRAINING DATA
+----- ----- -----
+Total Error WITHOUT Prior = 13806
+false positive rate = 0.13267754067276366
+false negative rate = 0.010959667271801669
+----- ----- -----
+Total Error WITH Prior = 14748
+false positive rate = 0.14365800932965112
+false negative rate = 0.008273377830429465
+----- ----- -----
+TEST DATA
+----- ----- -----
+Total Error WITHOUT Prior = 11246
+false positive rate = 0.12828438948995363
+false negative rate = 0.02106383126682012
+----- ----- -----
+Total Error WITH Prior = 12036
+false positive rate = 0.14504892128190602
+false negative rate = 0.017881187428053162
+----- ----- -----
+
+
+K=1:
+##########-##########-##########
+TRAINING DATA
+----- ----- -----
+Total Error WITHOUT Prior = 9052
+false positive rate = 0.08793266794456563
+false negative rate = 0.010284703665968203
+----- ----- -----
+Total Error WITH Prior = 9493
+false positive rate = 0.08767135363864768
+false negative rate = 0.014707430266494426
+----- ----- -----
+TEST DATA
+----- ----- -----
+Total Error WITHOUT Prior = 10798
+false positive rate = 0.10997051087909461
+false negative rate = 0.026950805621029784
+----- ----- -----
+Total Error WITH Prior = 10387
+false positive rate = 0.10332423317809539
+false negative rate = 0.027313871134911037
+----- ----- -----
+##########-##########-##########
+
+
+K=4
+
+##########-##########-##########
+TRAINING DATA
+----- ----- -----
+Total Error WITHOUT Prior = 102328
+false positive rate = 0.5527609416696377
+false negative rate = 1.9423132951345053e-05
+----- ----- -----
+Total Error WITH Prior = 102675
+false positive rate = 0.5536001207768539
+false negative rate = 9.711660791111887e-06
+----- ----- -----
+TEST DATA
+----- ----- -----
+Total Error WITHOUT Prior = 106000
+false positive rate = 0.6548795638710156
+false negative rate = 0.000347959466272786
+----- ----- -----
+Total Error WITH Prior = 116993
+false positive rate = 0.6769254803936885
+false negative rate = 1.4207168937445835e-05
+----- ----- -----
