@@ -113,7 +113,7 @@ class LOGREG(object):
             log_term = 1 + np.exp(wx)
             if log_term != 0:
                 cost -= np.log(log_term)
-        regularizationTerm = 0
+        regularizationTerm = self.r * np.linalg.norm(w[1::])
         return cost + regularizationTerm
 
     def _calculateDerivative(self, w: np.ndarray, X: np.ndarray, y: np.ndarray) -> np.ndarray:
@@ -126,10 +126,11 @@ class LOGREG(object):
         '''
         # TODO: Calculate derivative of loglikelihood function for posterior p(y=1|X,w)
         firstDerivative = 0
-        regularizationTerm = 0
+        regularizationTerm = 2 * self.r * w
+        regularizationTerm[0] = 0
         firstDerivative += np.dot(y, X.T)
         firstDerivative -= np.dot(self.activationFunction(w, X), X.T)
-        return firstDerivative + regularizationTerm
+        return firstDerivative + regularizationTerm.T
 
     def _calculateHessian(self, w: np.ndarray, X: np.ndarray) -> np.ndarray:
         '''
@@ -139,12 +140,15 @@ class LOGREG(object):
         '''
         # TODO: Calculate Hessian matrix of loglikelihood function for posterior p(y=1|X,w)
         hessian = 0
-        regularizationTerm = 0
         activation = self.activationFunction(w, X)
-        S = activation - np.square(activation)
-        diag = np.diag(S)
-        hessian = np.dot(np.dot(X, np.diag(S)), X.T)
-        return - hessian + regularizationTerm
+        S = np.diag(activation - np.square(activation))
+        hessian = np.dot(np.dot(X, S), X.T)
+        [N, M] = hessian.shape
+        regularizationTerm = self.r * 2
+        regArray = np.full((N), regularizationTerm)
+        regDiag = np.diag(regArray)
+        regDiag[0,0] = 0
+        return - hessian + regDiag
 
     def _optimizeNewtonRaphson(self, X: np.ndarray, y: np.ndarray, number_of_iterations: int) -> np.ndarray:
         '''
@@ -165,7 +169,8 @@ class LOGREG(object):
             oldposteriorloglikelihood = posteriorloglikelihood
             w_old = w
             h = self._calculateHessian(w, X)
-            w_update = w_old - np.dot(np.linalg.inv(h), np.transpose(np.array([self._calculateDerivative(w_old, X, y)])))
+            inverse = np.linalg.inv(h)
+            w_update = w_old - np.dot(np.linalg.inv(h), np.transpose(self._calculateDerivative(w_old, X, y)))
             w = w_update
             posteriorloglikelihood = self._costFunction(w, X, y)
             if self.r == 0:
