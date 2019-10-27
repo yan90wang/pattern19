@@ -23,7 +23,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="2" />
-          <entry key="py" value="49" />
+          <entry key="py" value="58" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -31,21 +31,21 @@
         <counts>
           <entry key="IPNB" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="49" />
+          <entry key="Python" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="12" />
           <entry key="dummy" value="5" />
-          <entry key="py" value="7680" />
+          <entry key="py" value="9349" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="7692" />
+          <entry key="Python" value="9361" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -57,36 +57,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/logreg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="168" column="41" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1571949852156" expanded="true" signature="3630:3636" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/naivebayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+            <state relative-caret-position="349">
+              <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+                <marker date="1572212822086" expanded="true" signature="5729:5730" ph="..." />
+                <marker date="1572212822086" expanded="true" signature="6119:6120" ph="..." />
+                <marker date="1572212822086" expanded="true" signature="6437:6438" ph="..." />
+                <marker date="1572212822086" expanded="true" signature="6872:6873" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-LOGREG_2_ImageClassification.py">
+        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-NaiveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="110" column="12" lean-forward="true" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+            <state relative-caret-position="125">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -101,6 +92,18 @@
               <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/naivebayes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="206" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,7 +138,10 @@
       <find>np.nd</find>
       <find>plot3D</find>
       <find>self.th</find>
+      <find>spamfiles</find>
       <find>regularizationTerm</find>
+      <find>classi</find>
+      <find>dictionary</find>
     </findStrings>
     <replaceStrings>
       <replace>xi</replace>
@@ -155,12 +161,14 @@
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex2/code/ex2-ML_3_GMM.py" />
         <option value="$PROJECT_DIR$/../exercise1.py" />
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex3/code/logreg.py" />
+        <option value="$PROJECT_DIR$/pattern-recognition-2019/ex3/code/naivebayes.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="360" />
-    <option name="width" value="1617" />
+    <option name="x" value="568" />
+    <option name="y" value="3" />
+    <option name="width" value="1343" />
     <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -217,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex3-LOGREG_2_ImageClassification">
+  <component name="RunManager" selected="Python.ex3-NaiveBayes">
     <configuration name="ex3-LOGREG_1_Toy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pattern-recognition-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,7 +268,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="logreg (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ex3-NaiveBayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pattern-recognition-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,11 +276,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../exercise2/ex4/code" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pattern-recognition-2019/ex3/code" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../exercise2/ex4/code/logreg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-NaiveBayes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -327,16 +335,16 @@
       <item itemvalue="Python.logreg" />
       <item itemvalue="Python.ex3-LOGREG_1_Toy" />
       <item itemvalue="Python.ex3-LOGREG_2_ImageClassification" />
-      <item itemvalue="Python.logreg (1)" />
       <item itemvalue="Python.naivebayes" />
+      <item itemvalue="Python.ex3-NaiveBayes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex3-NaiveBayes" />
+        <item itemvalue="Python.naivebayes" />
         <item itemvalue="Python.ex3-LOGREG_2_ImageClassification" />
         <item itemvalue="Python.ex3-LOGREG_1_Toy" />
-        <item itemvalue="Python.naivebayes" />
         <item itemvalue="Python.logreg" />
-        <item itemvalue="Python.logreg (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -363,16 +371,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="288" y="0" width="1293" height="831" extended-state="0" />
+    <frame x="455" y="3" width="1074" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.17515923" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.17550626" />
       <window_info id="Structure" order="1" sideWeight="0.5010526" side_tool="true" weight="0.26585624" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32808024" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.34670487" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2636103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
@@ -641,15 +649,6 @@
     <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/data/emails/test/3-1msg1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-NaiveBayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../exercise2/ex4/code/naivebayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-948">
@@ -663,16 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="153" column="45" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-LOGREG_1_Toy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,12 +700,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/naivebayes.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10064.28507/ex4-NaiveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+        <state relative-caret-position="-493" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10064.29545/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14800.31482/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14800.31825/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14800.32089/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14800.32602/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-NaiveBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/ex3-LOGREG_1_Toy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="206" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex3/code/naivebayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1572212822086" expanded="true" signature="5729:5730" ph="..." />
+            <marker date="1572212822086" expanded="true" signature="6119:6120" ph="..." />
+            <marker date="1572212822086" expanded="true" signature="6437:6438" ph="..." />
+            <marker date="1572212822086" expanded="true" signature="6872:6873" ph="..." />
           </folding>
         </state>
       </provider>
