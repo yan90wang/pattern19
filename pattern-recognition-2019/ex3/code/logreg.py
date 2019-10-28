@@ -169,7 +169,6 @@ class LOGREG(object):
             oldposteriorloglikelihood = posteriorloglikelihood
             w_old = w
             h = self._calculateHessian(w, X)
-            inverse = np.linalg.inv(h)
             w_update = w_old - np.dot(np.linalg.inv(h), np.transpose(self._calculateDerivative(w_old, X, y)))
             w = w_update
             posteriorloglikelihood = self._costFunction(w, X, y)
@@ -188,6 +187,8 @@ class LOGREG(object):
                     break
             # TODO: Implement convergenc check based on when w_update is close to zero
             # Note: You can make use of the class threshold value self._threshold
+            if np.all(w_old - w_update < self._threshold):
+                break
         print('final posteriorloglikelihood', posteriorloglikelihood, 'final likelihood',
               np.exp(posteriorloglikelihood))
 
@@ -215,7 +216,7 @@ class LOGREG(object):
         predictions = np.zeros((numberOfSamples))
         P = self.activationFunction(self.w, X)
         for samples in range(numberOfSamples):
-            if P[samples] > 0.5 :
+            if P[samples] > 0.5:
                 predictions[samples] = 1
         return predictions
 
@@ -230,4 +231,4 @@ class LOGREG(object):
         classified_samples = self.classify(X)
         numOfMissclassified = np.count_nonzero(classified_samples - y)
         totalError = numOfMissclassified / numberOfSamples
-        print("{}/{} misclassified. Total error: {:.2f}%.".format(numOfMissclassified, numberOfSamples, totalError))
+        print("{}/{} misclassified. Total error: {:.2f}%.".format(numOfMissclassified, numberOfSamples, totalError*100))

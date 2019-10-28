@@ -85,7 +85,7 @@ class naiveBayes():
                 spam_count_of_current_word = 1
                 occurrence += 1
             new_word = wordCounter(current_word, ham_count_of_current_word, spam_count_of_current_word,
-                                   occurrence / total_amount)
+                                   spam_count_of_current_word / occurrence)
             final_dictionary.append(new_word)
 
     def classify(self, message: str, number_of_features: int) -> bool:
