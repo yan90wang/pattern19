@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c928c3d-4881-4ae7-9270-631cd4880370" name="Default Changelist" comment="l" />
+    <list default="true" id="7c928c3d-4881-4ae7-9270-631cd4880370" name="Default Changelist" comment="l">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py" beforeDir="false" afterPath="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,29 +27,29 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="2" />
-          <entry key="py" value="99" />
-          <entry key="txt" value="2" />
+          <entry key="py" value="102" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="99" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="12" />
           <entry key="dummy" value="5" />
-          <entry key="py" value="12192" />
+          <entry key="py" value="12305" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="12204" />
+          <entry key="Python" value="12317" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -61,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_1_LinearToy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="100">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -70,49 +73,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="105">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/plotting_helper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_2_KernelToy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="120" column="52" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,8 +88,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_4_SpeedComparison.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            <state relative-caret-position="252">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -133,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../exercise2/ex3/code/svm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1510">
-              <caret line="171" column="26" lean-forward="true" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
+            <state relative-caret-position="273">
+              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -171,8 +150,8 @@
       <find>tol</find>
       <find>self.kerne</find>
       <find>printKernelClassificationError</find>
-      <find>linear</find>
       <find>plot_kernel_separator</find>
+      <find>linear</find>
     </findStrings>
     <replaceStrings>
       <replace>xi</replace>
@@ -198,15 +177,15 @@
         <option value="$PROJECT_DIR$/../exercise2/ex3/code/svm.py" />
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_1_LinearToy.py" />
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_2_KernelToy.py" />
+        <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_4_SpeedComparison.py" />
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py" />
         <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py" />
-        <option value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_4_SpeedComparison.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="842" />
-    <option name="width" value="1086" />
+    <option name="x" value="785" />
+    <option name="width" value="1143" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -266,7 +245,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercise1.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercise2/ex3" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -281,7 +260,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex4-SVM_4_SpeedComparison">
+  <component name="RunManager" selected="Python.ex4-SVM_3_ImageClassification">
+    <configuration name="ex3-SVM_1_LinearToy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pattern-recognition-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../exercise2/ex3/code" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../exercise2/ex3/code/ex3-SVM_1_LinearToy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ex4-SVM_1_LinearToy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pattern-recognition-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,27 +295,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_1_LinearToy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ex4-SVM_2_KernelToy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pattern-recognition-2019" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_2_KernelToy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -390,17 +369,17 @@
     <list>
       <item itemvalue="Python.svm" />
       <item itemvalue="Python.ex4-SVM_1_LinearToy" />
-      <item itemvalue="Python.ex4-SVM_2_KernelToy" />
       <item itemvalue="Python.ex4-SVM_3_ImageClassification" />
       <item itemvalue="Python.ex4-SVM_4_SpeedComparison" />
+      <item itemvalue="Python.ex3-SVM_1_LinearToy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ex4-SVM_3_ImageClassification" />
         <item itemvalue="Python.ex4-SVM_4_SpeedComparison" />
         <item itemvalue="Python.ex4-SVM_1_LinearToy" />
-        <item itemvalue="Python.ex4-SVM_3_ImageClassification" />
+        <item itemvalue="Python.ex3-SVM_1_LinearToy" />
         <item itemvalue="Python.svm" />
-        <item itemvalue="Python.ex4-SVM_2_KernelToy" />
       </list>
     </recent_temporary>
   </component>
@@ -428,14 +407,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.27748415" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.21564482" />
       <window_info id="Structure" order="1" sideWeight="0.5010526" side_tool="true" weight="0.26585624" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36477274" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36704546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3602273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
@@ -540,33 +520,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>146</line>
-          <option name="timeStamp" value="241" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>147</line>
-          <option name="timeStamp" value="242" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="274" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="275" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="276" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="277" />
+          <line>106</line>
+          <option name="timeStamp" value="286" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -589,17 +544,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/numpy/core/_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex2/code/imageHelper.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa20788.24947/classifyHelper.py" />
     <entry file="file://$PROJECT_DIR$/../exercise2/ex1&amp;2/classifyHelper.py" />
     <entry file="file://$PROJECT_DIR$/../exercise2/ex1&amp;2/ex2-ML_1_Toy.py" />
     <entry file="file://$PROJECT_DIR$/../exercise2/ex2/code/classifyHelper.py">
@@ -854,19 +798,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../exercise2/ex3/code/svm.py">
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/plotting_helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1510">
-          <caret line="171" column="26" lean-forward="true" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="120" column="52" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
+        <state relative-caret-position="154">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -881,20 +818,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../exercise2/ex3/code/ex3-SVM_1_LinearToy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pgAdmin_license.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pattern-recognition-2018/ex3/code/ex3-SVM_1_LinearToy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_1_LinearToy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="100">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/plotting_helper.py">
+    <entry file="file://$PROJECT_DIR$/../exercise2/ex3/code/svm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="273">
+          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -903,20 +869,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_4_SpeedComparison.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        <state relative-caret-position="252">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py">
+    <entry file="file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="271">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

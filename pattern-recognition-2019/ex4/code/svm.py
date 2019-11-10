@@ -94,17 +94,16 @@ class SVM(object):
         self.sv_labels = y[0, indexes_sv]  # List of labels for the support vectors (-1 or 1 for each support vector)
         self.w = 0
 
-        assert self.lambdas.shape[0] == None, 'no SV calculated over tol'
-
         mean_sv = 0
         for i in range(self.lambdas.shape[0]):
             mean_sv += self.sv[:, i]
         mean_sv = np.array([mean_sv / self.lambdas.shape[0]]).T
 
         if kernel is None:
-            for i in range(self.sv.shape[1]):
-                self.w += self.lambdas[i] * self.sv_labels[i] * self.sv[:, i]  # SVM weights used in the linear SVM
-            # Use the mean of all support vectors for stability when computing the bias (w_0)
+            self.w = np.dot(self.sv_labels * self.lambdas, self.sv.T)
+            # for i in range(self.sv.shape[1]):
+            #     self.w += self.lambdas[i] * self.sv_labels[i] * self.sv[:, i]  # SVM weights used in the linear SVM
+            # # Use the mean of all support vectors for stability when computing the bias (w_0)
             self.bias = self.sv_labels[0] - np.dot(np.array(self.w).T, mean_sv)  # Bias
         else:
             self.w = None
