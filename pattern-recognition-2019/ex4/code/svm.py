@@ -58,14 +58,17 @@ class SVM(object):
             # TODO: Compute the kernel matrix for the non-linear SVM with a polynomial kernel
             print('Fitting SVM with Polynomial kernel, order: {}'.format(kernelpar))
             K = self.__computeKernelMatrix__(x, self.__polynomialKernel__, kernelpar)
+            self.kernel = self.__polynomialKernel__
         elif kernel == 'rbf':
             # TODO: Compute the kernel matrix for the non-linear SVM with an RBF kernel
             print('Fitting SVM with RBF kernel, sigma: {}'.format(kernelpar))
             K = self.__computeKernelMatrix__(x, self.__gaussianKernel__, kernelpar)
+            self.kernel = self.__gaussianKernel__
         else:
             print('Fitting linear SVM')
             # TODO: Compute the kernel matrix for the linear SVM
             K = self.__computeKernelMatrix__(x, self.__linearKernel__, None)
+            self.kernel = self.__linearKernel__
 
         if self.C is None:
             G = cvx.matrix(-np.eye(NUM))
@@ -87,24 +90,29 @@ class SVM(object):
         self.lambdas = lambdas[lambdas > self.__TOL]  # Only save > 0
         indexes_sv = np.ravel(np.argwhere(lambdas > self.__TOL))
         self.sv = x[:, indexes_sv]  # List of support vectors
+        print("Number of support vectors: " + str(len(indexes_sv)))
         self.sv_labels = y[0, indexes_sv]  # List of labels for the support vectors (-1 or 1 for each support vector)
         self.w = 0
-        if kernel is None:
-            for i in range(self.sv.shape[1]):
-                self.w += self.lambdas[i] * self.sv_labels[i] * self.sv[:, i]  # SVM weights used in the linear SVM
-            # Use the mean of all support vectors for stability when computing the bias (w_0)
-        else:
-            for i in range(self.sv.shape[1]):
-                self.w += self.lambdas[i] * self.sv_labels[i] * self.k[:, i]
-            # Use the mean of all support vectors for stability when computing the bias (w_0).
-            # In the kernel case, remember to compute the inner product with the chosen kernel function.
+
         mean_sv = 0
         for i in range(self.lambdas.shape[0]):
             mean_sv += self.sv[:, i]
         mean_sv = np.array([mean_sv / self.lambdas.shape[0]]).T
-        m = self.lambdas * self.sv_labels
-        self.bias = self.sv_labels[0] - np.dot(np.array(self.w).T, mean_sv)  # Bias
 
+        if kernel is None:
+            for i in range(self.sv.shape[1]):
+                self.w += self.lambdas[i] * self.sv_labels[i] * self.sv[:, i]  # SVM weights used in the linear SVM
+            # Use the mean of all support vectors for stability when computing the bias (w_0)
+            self.bias = self.sv_labels[0] - np.dot(np.array(self.w).T, mean_sv)  # Bias
+        else:
+            self.w = None
+            # Use the mean of all support vectors for stability when computing the bias (w_0).
+            # In the kernel case, remember to compute the inner product with the chosen kernel function.
+            self.bias = 0
+            for i in range(self.sv.shape[1]):
+                self.bias += self.sv_labels[i]
+                self.bias -= np.sum(self.lambdas * self.sv_labels * self.k[indexes_sv[i], indexes_sv])
+            self.bias /= self.sv.shape[1]
         # TODO: Implement the KKT check
         self.__check__()
 
@@ -143,10 +151,12 @@ class SVM(object):
         :param x: Data to be classified
         :return: List of classification values (-1.0 or 1.0)
         '''
-        g = np.dot(np.dot(self.lambdas, self.sv_labels), self.k) + self.bias
-        classifications = []
-        for i in range(g.shape[1]):
-            classifications.append(np.sign(g[0, i]))
+        classifications = np.zeros(x.shape[1])
+        for i in range(x.shape[1]):
+            functionOut = 0
+            for j in range(len(self.lambdas)):
+                functionOut += (self.lambdas[j] * self.sv_labels[j] * self.kernel(x[:, i], self.sv[:, j], self.kernelpar))
+            classifications[i] = np.sign(functionOut + self.bias)
         return classifications
 
     def printKernelClassificationError(self, x: np.ndarray, y: np.ndarray) -> None:
@@ -157,5 +167,5 @@ class SVM(object):
         '''
         # TODO: Implement
         labels = self.classifyKernel(x)
-        result = len(np.count_nonzero(labels - y))
+        result = np.count_nonzero(labels - y)
         print("Total error: {:.2f}%".format(result))

@@ -33,20 +33,35 @@ def svmKernelToyExample() -> None:
     test_label = np.reshape(data['test'][d - 1, :], (1, n)).astype(float)
     test_label[test_label == 0.0] = -1.0
 
-    plot_data(plt, train_x, train_label, [['red', '+'], ['blue', '_']], 'Training')
-    plot_data(plt, test_x, test_label, [['yellow', '+'], ['green', '_']], 'Test')
-    plt.show()
+    #plot_data(plt, train_x, train_label, [['red', '+'], ['blue', '_']], 'Training')
+    #plot_data(plt, test_x, test_label, [['yellow', '+'], ['green', '_']], 'Test')
+    #plt.show()
 
     # TODO: Train svm
-    svm = ???
+    C = 1
+    kernel = ['linear', 'poly', 'rbf']
+    svm = SVM(C)
+    # svm.train(train_x, train_label, kernel[1], 8) C=100
+    svm.train(train_x, train_label, kernel[2], 0.1) # C =! 
 
     print("Training error")
     # TODO: Compute training error of SVM
+    svm.printKernelClassificationError(train_x, train_label)
+
     print("Test error")
     # TODO: Compute test error of SVM
+    svm.printKernelClassificationError(test_x, test_label)
 
     print("Visualizing data")
+    datamin = math.floor(min(np.min(train_x), np.min(np.max(test_x))))
+    datamax = math.ceil(max(np.max(train_x), np.max(np.max(test_x))))
+
     # TODO: Visualize data and separation boundary - hint: you can use the given "plot_kernel_separator" and the "plot_data" functions
+    plot_kernel_separator(plt, svm, datamin, datamax)
+    plot_data(plt, test_x, test_label, [['yellow', '+'], ['green', '_']], 'Test')
+    plot_data(plt, train_x, train_label, [['red', '+'], ['blue', '_']], 'Training')
+
+    plt.show()
 
 
 if __name__ == "__main__":
