@@ -42,7 +42,7 @@ def svmKernelToyExample() -> None:
     kernel = ['linear', 'poly', 'rbf']
     svm = SVM(C)
     # svm.train(train_x, train_label, kernel[1], 8) C=100
-    svm.train(train_x, train_label, kernel[2], 0.1) # C =! 
+    svm.train(train_x, train_label, kernel[2], 0.1) # C =!
 
     print("Training error")
     # TODO: Compute training error of SVM

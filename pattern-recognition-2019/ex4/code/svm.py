@@ -82,7 +82,7 @@ class SVM(object):
         P = cvx.matrix(np.outer(y, y) * K)
         q = cvx.matrix(-np.ones((NUM, 1)))
         b = cvx.matrix(0.0)
-        A = cvx.matrix(y)
+        A = cvx.matrix(y, (1, NUM))
         solution = cvx.solvers.qp(P, q, G, h, A, b)
         lambdas = np.ravel(solution['x'])
 
@@ -93,6 +93,8 @@ class SVM(object):
         print("Number of support vectors: " + str(len(indexes_sv)))
         self.sv_labels = y[0, indexes_sv]  # List of labels for the support vectors (-1 or 1 for each support vector)
         self.w = 0
+
+        assert self.lambdas.shape[0] == None, 'no SV calculated over tol'
 
         mean_sv = 0
         for i in range(self.lambdas.shape[0]):

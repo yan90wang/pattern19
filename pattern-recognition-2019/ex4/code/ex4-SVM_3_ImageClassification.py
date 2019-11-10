@@ -84,7 +84,7 @@ def svm_image(train: np.ndarray, test: np.ndarray, is_cifar: bool) -> SVM:
     :return: Trained SVM object
     '''
 
-    linear = True
+    linear = False
 
     _, N = np.shape(train)
     if is_cifar:
@@ -100,28 +100,33 @@ def svm_image(train: np.ndarray, test: np.ndarray, is_cifar: bool) -> SVM:
     test_label[test_label == 0] = -1.0
     test_x = test[1:, :].astype(float)
 
-    # TODO: Train svm
-    C = 100
+    C = 100000
     svm = SVM(C)
-    # # use a linear instead of a linear kernel to improve speed
-    linear = False
-    kernel = ['linear', 'poly', 'rbf']
-
-    svm.train(train_x, train_label, kernel[2], 0.1)
-
-    print("Training error")
-    # TODO: Compute training error of SVM
-    svm.printKernelClassificationError(train_x, train_label)
-
-    print("Test error")
-    # TODO: Compute test error of SVM
-    svm.printKernelClassificationError(test_x, test_label)
-
 
     if linear:
+        svm.train(train_x, train_label)
+        print("Training error")
+        # TODO: Compute training error of SVM
+        svm.printLinearClassificationError(train_x, train_label)
+
+        print("Test error")
+        # TODO: Compute test error of SVM
+        svm.printLinearClassificationError(test_x, test_label)
+
         visualizeClassification(train_x, train_label, svm.classifyLinear(train_x), 3 * 3, is_cifar, 'training')
         visualizeClassification(test_x, test_label, svm.classifyLinear(test_x), 3 * 3, is_cifar, 'test')
     else:
+        # # use a linear instead of a linear kernel to improve speed
+        kernel = ['linear', 'poly', 'rbf']
+        svm.train(train_x, train_label, kernel[2], 1)
+
+        print("Training error")
+        # TODO: Compute training error of SVM
+        svm.printKernelClassificationError(train_x, train_label)
+
+        print("Test error")
+        # TODO: Compute test error of SVM
+        svm.printKernelClassificationError(test_x, test_label)
         visualizeClassification(train_x, train_label, svm.classifyKernel(train_x), 3 * 3, is_cifar, 'training')
         visualizeClassification(test_x, test_label, svm.classifyKernel(test_x), 3 * 3, is_cifar, 'test')
     return svm

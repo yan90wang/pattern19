@@ -31,9 +31,23 @@ def svmSpeedComparison() -> None:
 
     toy_test_x = toy_test[1:3, :].astype(np.double)
 
+    C = None
+    svm = SVM(C)
+    svm.train(toy_train_x, toy_train_label, )
+
+    startlin = time.time()
+    for i in range(numOfRuns):
+        svm.classifyLinear(toy_test_x)
+    endlin = time.time()
+
+    startkernel = time.time()
+    for i in range(numOfRuns):
+        svm.classifyKernel(toy_test_x)
+    endkernel = time.time()
+
     # TODO: Compute the average classification time of both the linear and the kernel SVM (with a linear kernel)
-    result_linear = ???
-    result_kernel = ???
+    result_linear = endlin - startlin
+    result_kernel = endkernel - startkernel
 
     print('Linear SVM timing: \n {:.10f} over {} runs'.format(result_linear, numOfRuns))
     print('SVM with linear kernel timing: \n {:.10f} over {} runs'.format(result_kernel, numOfRuns))
