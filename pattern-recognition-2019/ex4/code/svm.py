@@ -82,7 +82,7 @@ class SVM(object):
         P = cvx.matrix(np.outer(y, y) * K)
         q = cvx.matrix(-np.ones((NUM, 1)))
         b = cvx.matrix(0.0)
-        A = cvx.matrix(y, (1, NUM))
+        A = cvx.matrix(y)
         solution = cvx.solvers.qp(P, q, G, h, A, b)
         lambdas = np.ravel(solution['x'])
 
@@ -94,19 +94,13 @@ class SVM(object):
         self.sv_labels = y[0, indexes_sv]  # List of labels for the support vectors (-1 or 1 for each support vector)
         self.w = 0
 
-        mean_sv = 0
-        for i in range(self.lambdas.shape[0]):
-            mean_sv += self.sv[:, i]
-        mean_sv = np.array([mean_sv / self.lambdas.shape[0]]).T
-
         if kernel is None:
-            self.w = np.dot(self.sv_labels * self.lambdas, self.sv.T)
+            self.w = np.sum(self.sv_labels * self.lambdas * self.sv, axis=1)
             # for i in range(self.sv.shape[1]):
             #     self.w += self.lambdas[i] * self.sv_labels[i] * self.sv[:, i]  # SVM weights used in the linear SVM
             # # Use the mean of all support vectors for stability when computing the bias (w_0)
-            self.bias = self.sv_labels[0] - np.dot(np.array(self.w).T, mean_sv)  # Bias
+            self.bias = np.mean(self.sv_labels - np.dot(self.w, self.sv))
         else:
-            self.w = None
             # Use the mean of all support vectors for stability when computing the bias (w_0).
             # In the kernel case, remember to compute the inner product with the chosen kernel function.
             self.bias = 0
@@ -143,8 +137,8 @@ class SVM(object):
         '''
         # TODO: Implement
         labels = self.classifyLinear(x)
-        result = np.count_nonzero(labels - y)
-        print("Total error: {:.2f}%".format(result))
+        result = np.count_nonzero(labels - y) / len(labels)
+        print("Total error: {:.2f}%".format(result * 100))
 
     def classifyKernel(self, x: np.ndarray) -> np.ndarray:
         '''
@@ -168,5 +162,5 @@ class SVM(object):
         '''
         # TODO: Implement
         labels = self.classifyKernel(x)
-        result = np.count_nonzero(labels - y)
-        print("Total error: {:.2f}%".format(result))
+        result = np.count_nonzero(labels - y) / len(labels)
+        print("Total error: {:.2f}%".format(result * 100))
