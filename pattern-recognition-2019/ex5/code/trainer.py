@@ -108,7 +108,7 @@ class Trainer():
             slice = self.get_ith_batch_ixs(batch_idx, X_evaluate.shape[0], self.batch_size)
             batch_data = X_evaluate[slice, :]
             inputs = torch.from_numpy(batch_data)
-            targets = torch.from_numpy(y_evaluate[:, slice]).T
+            targets = torch.from_numpy(y_evaluate[:, slice].T)
             y_hat = self.model.forward(inputs)
 
             loss = self.criterion(y_hat, targets)
