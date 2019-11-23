@@ -20,7 +20,7 @@ def parabolaData() -> None:
     batch_size = nTrainSamples/100         # Define training batch size
     model = mySimpleNN(X_train.shape[1])   # Initialize the 'mySimpleNN' instance
     optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)           # Define optimizer to use from torch.optim.xxx
-    criterion = torch.nn.CrossEntropyLoss(reduction='sum')       # Define model cost function torch.nn.xxx
+    criterion = torch.nn.MSELoss(reduction='sum')      # Define model cost function torch.nn.xxx
     epocs = 100        # Total number of epocs to execute
 
     trainer = Trainer(model, optimizer, criterion)

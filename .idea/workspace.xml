@@ -75,27 +75,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ex4-SVM_3_ImageClassification" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pattern-recognition-2019" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern-recognition-2019/ex4/code/ex4-SVM_3_ImageClassification.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="ex4-SVM_4_SpeedComparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pattern-recognition-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,20 +138,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="trainer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pattern-recognition-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pattern-recognition-2019/ex5/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pattern-recognition-2019/ex5/code/trainer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.ex4-SVM_1_LinearToy" />
-      <item itemvalue="Python.ex4-SVM_3_ImageClassification" />
       <item itemvalue="Python.ex4-SVM_4_SpeedComparison" />
       <item itemvalue="Python.ex5_NN_1_Toy" />
       <item itemvalue="Python.ex5_NN_2_Parabola" />
+      <item itemvalue="Python.trainer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ex5_NN_2_Parabola" />
+        <item itemvalue="Python.trainer" />
         <item itemvalue="Python.ex5_NN_1_Toy" />
         <item itemvalue="Python.ex4-SVM_4_SpeedComparison" />
         <item itemvalue="Python.ex4-SVM_1_LinearToy" />
-        <item itemvalue="Python.ex4-SVM_3_ImageClassification" />
       </list>
     </recent_temporary>
   </component>
