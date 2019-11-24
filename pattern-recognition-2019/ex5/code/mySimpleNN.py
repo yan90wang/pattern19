@@ -10,9 +10,9 @@ class mySimpleNN(torch.nn.Module):
         super(mySimpleNN, self).__init__()
     # TODO: Define a simple neural network
         self.model = torch.nn.Sequential(
-          torch.nn.Linear(input_shape, 7),
+          torch.nn.Linear(input_shape, 10),
           torch.nn.ReLU(),
-          torch.nn.Linear(7, 1),
+          torch.nn.Linear(10, 1),
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
