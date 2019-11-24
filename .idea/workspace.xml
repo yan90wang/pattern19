@@ -53,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ex5_NN_2_Parabola">
+  <component name="RunManager" selected="Python.ex5_NN_3_Images">
     <configuration name="ex5_NN_2_Parabola" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pattern-recognition-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,8 +168,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ex5_NN_2_Parabola" />
         <item itemvalue="Python.ex5_NN_3_Images" />
+        <item itemvalue="Python.ex5_NN_2_Parabola" />
         <item itemvalue="Python.myImageNN" />
         <item itemvalue="Python.mySimpleNN" />
         <item itemvalue="Python.trainer" />
@@ -298,6 +298,11 @@
           <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex4/code/svm.py</url>
           <line>111</line>
           <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pattern-recognition-2019/ex5/code/ex5_NN_3_Images.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="322" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

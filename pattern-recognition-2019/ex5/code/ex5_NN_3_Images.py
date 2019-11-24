@@ -106,20 +106,26 @@ def train_and_validate(myModel, criterion, optimizer, epochs=25):
         valid_acc = 0.0
         for i, (inputs, labels) in enumerate(train_data_loader):
             optimizer.zero_grad()
-            outputs = myModel(inputs.view(-1, inputs.size(0)))
+            if myModel.type == 'cnn':
+                outputs = myModel(inputs)
+            else:
+                outputs = myModel(inputs.view(-1, inputs.size(0)))
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
             train_loss += loss.item() * inputs.size(0)
             ret, predictions = torch.max(outputs.data, 1)
-            correct_counts = predictions.eq(labels.data.view_as(predictions))
+            correct_counts = predictions[0].eq(labels.data.view_as(predictions))
             acc = torch.mean(correct_counts.type(torch.FloatTensor))
             train_acc += acc.item() * inputs.size(0)
             print("Batch number: {:03d}, Training: Loss: {:.4f}, Accuracy: {:.4f}".format(i, loss.item(), acc.item()))
         with torch.no_grad():
             myModel.eval()
             for j, (inputs, labels) in enumerate(valid_data_loader):
-                outputs = myModel(inputs.view(-1, inputs.size(0)))
+                if myModel.type == 'cnn':
+                    outputs = myModel(inputs)
+                else:
+                    outputs = myModel(inputs.view(-1, inputs.size(0)))
                 loss = criterion(outputs, labels)
                 valid_loss += loss.item() * inputs.size(0)
                 ret, predictions = torch.max(outputs.data, 1)
@@ -151,9 +157,8 @@ def logreg_train_test():
     writeHistoryPlots(logRegHistory, 'logRegModel', 'output/')
 
 
-if __name__ == '__main__':
-    #logreg_train_test()
-
+def fully_connected_train_test():
+    global criterion, optimizer
     # TODO: train and test the fully connected DNN
     print('##########################')
     print('Testing Deep Neural Net')
@@ -163,12 +168,22 @@ if __name__ == '__main__':
     finalDNNmodel, dnnHistory = train_and_validate(dnnModel, criterion, optimizer, epochs=20)
     writeHistoryPlots(dnnHistory, 'dnnModel', 'output/')
 
+
+def cnn_train_test():
+    global criterion, optimizer
     # TODO: train and test a CNN
     print('##########################')
     print('Testing Convolutional Neural Net')
     cnnModel = MyCNN()
-    criterion = torch.nn.NLLLoss()  # Cost function - torch.nn.XXX loss functions
-    optimizer = torch.optim.Adam(cnnModel.parameters())   # Optimizer algorithm - torch.optim.XXX function
-
+    criterion = torch.nn.CrossEntropyLoss()  # Cost function - torch.nn.XXX loss functions
+    optimizer = torch.optim.Adam(cnnModel.parameters())  # Optimizer algorithm - torch.optim.XXX function
     finalCNNmodel, cnnHistory = train_and_validate(cnnModel, criterion, optimizer, epochs=20)
     writeHistoryPlots(cnnHistory, 'cnnModel', 'output/')
+
+
+if __name__ == '__main__':
+    logreg_train_test()
+
+    fully_connected_train_test()
+
+    cnn_train_test()
